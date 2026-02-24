@@ -5,11 +5,43 @@ import styles from './contact.module.css';
 
 export default function ContactPage() {
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Simulate submission
-        setSubmitted(true);
+        setLoading(true);
+        setError('');
+
+        const formData = new FormData(e.currentTarget);
+        const data = {
+            name: formData.get('name') as string,
+            email: formData.get('email') as string,
+            service: formData.get('service') as string,
+            message: formData.get('message') as string,
+        };
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Failed to send email');
+            }
+
+            setSubmitted(true);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'Failed to send email');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -27,7 +59,7 @@ export default function ContactPage() {
                             <div className={styles.contactInfo}>
                                 <div className={styles.infoCard}>
                                     <h4>Global Headquarters</h4>
-                                    <p>9232 Peony Ln N, Maple Grove, MN 55311, USA</p>
+                                    <p>Maple Grove, MN 55311, USA</p>
                                 </div>
                                 <div className={styles.infoCard}>
                                     <h4>India Office</h4>
@@ -44,29 +76,32 @@ export default function ContactPage() {
                             {!submitted ? (
                                 <form className={styles.form} onSubmit={handleSubmit}>
                                     <h3>Request a Demo</h3>
+                                    {error && <div style={{ color: 'red', marginBottom: '1rem' }}>{error}</div>}
                                     <div className={styles.inputGroup}>
                                         <label>Full Name</label>
-                                        <input type="text" placeholder="John Doe" required />
+                                        <input type="text" name="name" placeholder="John Doe" required disabled={loading} />
                                     </div>
                                     <div className={styles.inputGroup}>
                                         <label>Work Email</label>
-                                        <input type="email" placeholder="john@company.com" required />
+                                        <input type="email" name="email" placeholder="john@company.com" required disabled={loading} />
                                     </div>
                                     <div className={styles.inputGroup}>
                                         <label>Service Interested In</label>
-                                        <select required>
+                                        <select name="service" required disabled={loading}>
                                             <option value="">Select a service</option>
-                                            <option value="automation">Workflow Automation</option>
-                                            <option value="orchestration">Multi-Agent Orchestration</option>
-                                            <option value="consulting">End-to-End AI Consulting</option>
-                                            <option value="other">Other Software Development</option>
+                                            <option value="Workflow Automation">Workflow Automation</option>
+                                            <option value="Multi-Agent Orchestration">Multi-Agent Orchestration</option>
+                                            <option value="End-to-End AI Consulting">End-to-End AI Consulting</option>
+                                            <option value="Other Software Development">Other Software Development</option>
                                         </select>
                                     </div>
                                     <div className={styles.inputGroup}>
                                         <label>Message</label>
-                                        <textarea rows={4} placeholder="Tell us about your project..." required></textarea>
+                                        <textarea name="message" rows={4} placeholder="Tell us about your project..." required disabled={loading}></textarea>
                                     </div>
-                                    <button type="submit" className="btn-primary">Send Request</button>
+                                    <button type="submit" className="btn-primary" disabled={loading}>
+                                        {loading ? 'Sending...' : 'Send Request'}
+                                    </button>
                                 </form>
                             ) : (
                                 <div className={styles.success}>
