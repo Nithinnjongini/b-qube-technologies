@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
     try {
@@ -16,12 +14,20 @@ export async function POST(request: NextRequest) {
         }
 
         console.log('Attempting to send emails...');
-        console.log('API Key configured:', !!process.env.RESEND_API_KEY);
 
-        // Send email to company (using verified email address)
-        const companyEmail = await resend.emails.send({
-            from: 'B-Qube Contact Form <onboarding@resend.dev>',
-            to: ['nithinjosephs@gmail.com'],
+        // Create transporter using Gmail SMTP
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_APP_PASSWORD,
+            },
+        });
+
+        // Send email to company
+        const companyMailOptions = {
+            from: `"B-Qube Contact Form" <${process.env.EMAIL_USER}>`,
+            to: 'contactbqubetech@gmail.com',
             subject: `New Contact Form Submission from ${name}`,
             html: `
                 <h2>New Contact Form Submission</h2>
@@ -44,14 +50,15 @@ Message: ${message}
 ---
 This email was sent from the B-Qube Technologies contact form.
             `.trim(),
-        });
+        };
 
-        console.log('Company email sent:', companyEmail);
+        await transporter.sendMail(companyMailOptions);
+        console.log('Company email sent successfully');
 
         // Send confirmation email to user
-        const userEmail = await resend.emails.send({
-            from: 'B-Qube Technologies <onboarding@resend.dev>',
-            to: [email],
+        const userMailOptions = {
+            from: `"B-Qube Technologies" <${process.env.EMAIL_USER}>`,
+            to: email,
             subject: 'Thank you for contacting B-Qube Technologies',
             html: `
                 <h2>Thank you for reaching out, ${name}!</h2>
@@ -82,22 +89,18 @@ B-Qube Technologies Team
 ---
 This is an automated confirmation email. Please do not reply to this email.
             `.trim(),
-        });
+        };
 
-        console.log('User confirmation email sent:', userEmail);
+        await transporter.sendMail(userMailOptions);
+        console.log('User confirmation email sent successfully');
 
         return NextResponse.json({
             success: true,
             message: 'Emails sent successfully',
-            data: { 
-                companyEmailId: companyEmail.data?.id,
-                userEmailId: userEmail.data?.id
-            }
         });
 
     } catch (error: any) {
         console.error('Error sending email:', error);
-        console.error('Error details:', error.message, error.statusCode);
         return NextResponse.json(
             { 
                 error: 'Failed to send email. Please try again later.',
