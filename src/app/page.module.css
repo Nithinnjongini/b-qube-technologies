@@ -1,0 +1,169 @@
+.home {
+  padding-top: 80px;
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid var(--primary);
+  border-radius: 100px;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: #a1a1aa;
+}
+
+.cta {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.secondaryBtn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.secondaryBtn:hover {
+  background: var(--glass-border);
+}
+
+.heroVisual {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  z-index: 1;
+}
+
+.aiCircle {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(60px);
+  animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  padding: 2.5rem;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.learnMore {
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.legacySection {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+.legacyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.legacyItem h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .grid,
+  .legacyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: auto;
+    padding: 6rem 0;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .heroVisual {
+    display: none;
+  }
+}

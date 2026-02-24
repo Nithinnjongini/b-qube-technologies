@@ -1,0 +1,113 @@
+.contactPage {
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.content p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+.contactInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.infoCard h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.formContainer {
+    padding: 3rem;
+    border-radius: 24px;
+}
+
+.form h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #a1a1aa;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.form button {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.success {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.successIcon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 2rem;
+}
+
+.resetBtn {
+    margin-top: 2rem;
+    color: var(--primary);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}

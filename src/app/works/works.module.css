@@ -1,0 +1,204 @@
+.worksPage {
+    padding-top: 80px;
+}
+
+.header {
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.projectCard {
+    border-radius: 24px;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.visualPlaceholder {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.visualPlaceholder::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+    animation: placeholderPulse 8s infinite alternate ease-in-out;
+}
+
+@keyframes placeholderPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.projectCard:hover .projectImage {
+    transform: scale(1.1);
+}
+
+.meta {
+    padding: 2.5rem;
+}
+
+.category {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.meta h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.viewDetails {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.modalContent {
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    border-radius: 32px;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 10;
+    line-height: 1;
+}
+
+.modalHeader {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.modalImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modalHeaderOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.modalHeader h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.modalBody {
+    padding: 3rem;
+}
+
+.detailSection {
+    margin-bottom: 3rem;
+}
+
+.detailSection h4 {
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Base h4 and other tags are handled by global scope, 
+   but for pureity we should use classes if we ever move to Server Components.
+   Since this is a client component, tag selectors are safer but let's stick to classes.
+*/
+
+@media (max-width: 992px) {
+    .modalContent {
+        max-height: 85vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modalHeader {
+        height: 200px;
+    }
+
+    .modalBody,
+    .modalHeaderOverlay {
+        padding: 2rem;
+    }
+}
