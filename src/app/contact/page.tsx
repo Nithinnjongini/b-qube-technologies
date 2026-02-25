@@ -59,7 +59,19 @@ export default function ContactPage() {
                             <div className={styles.contactInfo}>
                                 <div className={styles.infoCard}>
                                     <h4>Global Headquarters</h4>
-                                    <p>Maple Grove, MN 55311, USA</p>
+                                    <p>Minnesota, USA</p>
+                                </div>
+                                <div className={styles.infoCard}>
+                                    <h4>Texas Office</h4>
+                                    <p>Texas, USA</p>
+                                </div>
+                                <div className={styles.infoCard}>
+                                    <h4>Oklahoma Office</h4>
+                                    <p>Oklahoma, USA</p>
+                                </div>
+                                <div className={styles.infoCard}>
+                                    <h4>Missouri Office</h4>
+                                    <p>Missouri, USA</p>
                                 </div>
                                 <div className={styles.infoCard}>
                                     <h4>India Office</h4>

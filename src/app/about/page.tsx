@@ -49,7 +49,7 @@ export default function AboutPage() {
         {
             year: '2024',
             title: 'Global Team',
-            description: 'Built a distributed team across USA, India, and UK for round-the-clock development'
+            description: 'Built a distributed team across multiple US states (Minnesota, Texas, Oklahoma, Missouri), India, and UK for round-the-clock development'
         },
         {
             year: '2025',
@@ -119,7 +119,7 @@ export default function AboutPage() {
                                 <div>
                                     <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🌍</div>
                                     <h4 style={{ marginBottom: '0.5rem' }}>Global Reach</h4>
-                                    <p style={{ color: '#94a3b8', fontSize: '0.95rem' }}>Offices in USA, India, and UK ensure round-the-clock support and diverse expertise.</p>
+                                    <p style={{ color: '#94a3b8', fontSize: '0.95rem' }}>Offices across multiple US states, India, and UK ensure round-the-clock support and diverse expertise.</p>
                                 </div>
                                 <div>
                                     <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>💎</div>
