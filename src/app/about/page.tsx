@@ -95,7 +95,7 @@ export default function AboutPage() {
             {/* Our Story */}
             <section className="section">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                    <div className={styles.twoColGrid}>
                         <div>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Our Story</h2>
                             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', color: '#94a3b8' }}>
@@ -153,7 +153,7 @@ export default function AboutPage() {
             {/* Mission & Vision */}
             <section className="section">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '4rem' }}>
+                    <div className={styles.missionGrid}>
                         <div className="glass" style={{ padding: '3rem', borderRadius: '1.5rem', border: '2px solid var(--primary)' }}>
                             <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎯</div>
                             <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--primary)' }}>Our Mission</h3>
@@ -200,7 +200,7 @@ export default function AboutPage() {
                     </p>
                     <div style={{ position: 'relative', maxWidth: '900px', margin: '0 auto' }}>
                         {milestones.map((milestone, index) => (
-                            <div key={index} style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: '2rem', marginBottom: '3rem', position: 'relative' }}>
+                            <div key={index} className={styles.timelineRow}>
                                 <div style={{ textAlign: 'right' }}>
                                     <div style={{ 
                                         display: 'inline-block',

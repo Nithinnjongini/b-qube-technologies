@@ -2,6 +2,28 @@
     padding-top: 80px;
 }
 
+.twoColGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.missionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.timelineRow {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
 .header {
     padding: 6rem 0 4rem;
     text-align: center;
@@ -60,5 +82,39 @@
     .contentGrid,
     .visionGrid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 4rem 0 2rem;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .mainContent h2 {
+        font-size: 1.8rem;
+    }
+
+    .twoColGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .missionGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .timelineRow {
+        grid-template-columns: 80px 1fr;
+        gap: 1rem;
     }
 }
