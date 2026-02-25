@@ -17,19 +17,19 @@ export default function CareersPage() {
                                 <h3>AI Engineer (Multi-Agent Systems)</h3>
                                 <p>USA / Remote</p>
                             </div>
-                            <a href="mailto:bqubejobs@gmail.com" className="btn-primary">Apply Now</a>
+                            <a href="mailto:bqubetechjobs@gmail.com" className="btn-primary">Apply Now</a>
                         </div>
                         <div className={`${styles.jobCard} glass`}>
                             <div>
                                 <h3>Senior Full Stack Developer (Next.js)</h3>
                                 <p>USA / Remote</p>
                             </div>
-                            <a href="mailto:bqubejobs@gmail.com" className="btn-primary">Apply Now</a>
+                            <a href="mailto:bqubetechjobs@gmail.com" className="btn-primary">Apply Now</a>
                         </div>
                     </div>
 
                     <div className={styles.contactEmail}>
-                        <p>Don't see a position that fits? Send us your CV at <a href="mailto:bqubejobs@gmail.com">bqubejobs@gmail.com</a></p>
+                        <p>Don't see a position that fits? Send us your CV at <a href="mailto:bqubetechjobs@gmail.com">bqubetechjobs@gmail.com</a></p>
                     </div>
                 </div>
             </section>
