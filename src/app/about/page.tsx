@@ -49,7 +49,7 @@ export default function AboutPage() {
         {
             year: '2024',
             title: 'Global Team',
-            description: 'Built a distributed team across multiple US states (Minnesota, Texas, Oklahoma, Missouri), India, and UK for round-the-clock development'
+            description: 'Built a distributed team across multiple US states (Minnesota, Texas, Oklahoma, Mississippi), India, and UK for round-the-clock development'
         },
         {
             year: '2025',

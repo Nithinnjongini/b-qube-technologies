@@ -70,8 +70,8 @@ export default function ContactPage() {
                                     <p>Oklahoma, USA</p>
                                 </div>
                                 <div className={styles.infoCard}>
-                                    <h4>Missouri Office</h4>
-                                    <p>Missouri, USA</p>
+                                    <h4>Mississippi Office</h4>
+                                    <p>Mississippi, USA</p>
                                 </div>
                                 <div className={styles.infoCard}>
                                     <h4>India Office</h4>
