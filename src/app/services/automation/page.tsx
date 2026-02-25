@@ -86,7 +86,7 @@ export default function AutomationPage() {
                     <div style={{ display: 'grid', gap: '2rem' }}>
                         {useCases.map((useCase, index) => (
                             <div key={index} className="glass" style={{ padding: '2rem', borderRadius: '1rem' }}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '2rem', alignItems: 'center' }}>
+                                <div className={styles.useCaseRow}>
                                     <div>
                                         <h3 style={{ marginBottom: '0.5rem', color: '#3b82f6' }}>{useCase.title}</h3>
                                         <p style={{ color: '#94a3b8', fontSize: '0.95rem' }}>{useCase.description}</p>

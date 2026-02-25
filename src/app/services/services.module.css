@@ -104,10 +104,132 @@
     font-size: 1.1rem;
 }
 
+.detailGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.useCaseRow {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.orchestrationStepRow {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.agentGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.phaseRow {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+}
+
+.phaseDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.benefitList {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.benefitList li {
+    padding-left: 1.5rem;
+    position: relative;
+    color: #d4d4d8;
+}
+
+.benefitList li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.visualCard {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+}
+
 @media (max-width: 992px) {
 
     .aiGrid,
-    .legacyGrid {
+    .legacyGrid,
+    .detailGrid {
         grid-template-columns: 1fr;
+    }
+
+    .agentGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 4rem 0 2rem;
+    }
+
+    .mainTitle {
+        font-size: 2.2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .ctaBox {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .ctaTitle {
+        font-size: 1.8rem;
+    }
+
+    .useCaseRow {
+        grid-template-columns: 1fr;
+    }
+
+    .orchestrationStepRow {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .agentGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .phaseRow {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .phaseDetails {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .aiCard {
+        padding: 2rem;
     }
 }

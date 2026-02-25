@@ -66,7 +66,7 @@ export default function OrchestrationPage() {
                     {/* Architecture Diagram */}
                     <div className="glass" style={{ padding: '3rem', borderRadius: '1.5rem', marginBottom: '3rem' }}>
                         <h3 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.5rem' }}>Multi-Agent Architecture</h3>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '2rem' }}>
+                        <div className={styles.agentGrid}>
                             {agentTypes.map((agent, index) => (
                                 <div key={index} style={{ 
                                     padding: '1.5rem', 
@@ -137,7 +137,7 @@ export default function OrchestrationPage() {
                     <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                         {orchestrationExample.steps.map((step, index) => (
                             <div key={index} style={{ marginBottom: '1.5rem' }}>
-                                <div className="glass" style={{ padding: '1.5rem', borderRadius: '1rem', display: 'grid', gridTemplateColumns: '150px 1fr 1fr', gap: '1.5rem', alignItems: 'center' }}>
+                                <div className={`glass ${styles.orchestrationStepRow}`} style={{ padding: '1.5rem', borderRadius: '1rem' }}>
                                     <div style={{ 
                                         padding: '0.75rem 1rem',
                                         background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',

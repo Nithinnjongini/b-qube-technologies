@@ -145,7 +145,7 @@ export default function ConsultingPage() {
                     <div style={{ display: 'grid', gap: '2rem' }}>
                         {consultingPhases.map((phase, index) => (
                             <div key={index} className="glass" style={{ padding: '2rem', borderRadius: '1rem' }}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '100px 1fr', gap: '2rem' }}>
+                                <div className={styles.phaseRow}>
                                     <div style={{ textAlign: 'center' }}>
                                         <div style={{ 
                                             width: '80px', 
@@ -166,7 +166,7 @@ export default function ConsultingPage() {
                                     </div>
                                     <div>
                                         <h3 style={{ marginBottom: '1rem', fontSize: '1.5rem', color: '#3b82f6' }}>{phase.title}</h3>
-                                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                                        <div className={styles.phaseDetails}>
                                             <div>
                                                 <h4 style={{ fontSize: '0.9rem', color: '#94a3b8', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Key Activities</h4>
                                                 <ul style={{ fontSize: '0.95rem', color: '#e2e8f0', lineHeight: '1.8', paddingLeft: '1.5rem' }}>

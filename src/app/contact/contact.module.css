@@ -111,3 +111,27 @@
         gap: 4rem;
     }
 }
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2.2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .formContainer {
+        padding: 1.75rem;
+    }
+
+    .grid {
+        gap: 2.5rem;
+    }
+
+    .contactInfo {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
