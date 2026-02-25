@@ -37,39 +37,37 @@ export default function AboutPage() {
 
     const milestones = [
         {
-            year: '2018',
-            title: 'Founded',
-            description: 'B-Qube Technologies established with a vision to transform businesses through technology'
-        },
-        {
-            year: '2020',
-            title: 'Global Expansion',
-            description: 'Opened offices in India and UK, establishing 24/7 development capabilities'
-        },
-        {
             year: '2022',
-            title: 'AI Transformation',
-            description: 'Pivoted to AI-first approach, becoming early adopters of LLM and agentic technologies'
+            title: 'Founded',
+            description: 'B-Qube Technologies launched as an AI-first startup with a vision to transform businesses through intelligent automation'
+        },
+        {
+            year: '2023',
+            title: 'First Clients',
+            description: 'Successfully delivered initial projects, establishing our reputation for quality and innovation'
         },
         {
             year: '2024',
-            title: '100+ Projects',
-            description: 'Delivered over 100 successful projects across healthcare, finance, retail, and manufacturing'
+            title: 'Global Team',
+            description: 'Built a distributed team across USA, India, and UK for round-the-clock development'
+        },
+        {
+            year: '2025',
+            title: 'Multi-Agent Expertise',
+            description: 'Developed advanced capabilities in LLM technologies and multi-agent orchestration systems'
         },
         {
             year: '2026',
-            title: 'Industry Leader',
-            description: 'Recognized as a leading AI consulting firm with multi-agent orchestration expertise'
+            title: 'Growing Impact',
+            description: 'Expanding our reach and helping more businesses unlock the power of AI automation'
         }
     ];
 
     const achievements = [
-        { metric: '100+', label: 'Projects Delivered', icon: '🎯' },
-        { metric: '50+', label: 'Enterprise Clients', icon: '🏢' },
-        { metric: '95%', label: 'Client Retention', icon: '💯' },
+        { metric: '20+', label: 'Projects Delivered', icon: '🎯' },
         { metric: '24/7', label: 'Global Support', icon: '🌐' },
-        { metric: '3x', label: 'Average ROI', icon: '📈' },
-        { metric: '15+', label: 'Industries Served', icon: '🔧' }
+        { metric: '2022', label: 'Founded', icon: '�' },
+        { metric: '5+', label: 'Industries Served', icon: '🔧' }
     ];
 
     return (
@@ -101,13 +99,13 @@ export default function AboutPage() {
                         <div>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Our Story</h2>
                             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', color: '#94a3b8' }}>
-                                Founded in 2018, B-Qube Technologies emerged from a simple yet powerful vision: to help businesses transcend traditional boundaries through innovative technology solutions.
+                                Founded in 2022, B-Qube Technologies is an emerging AI-first startup with a bold vision: to help businesses transcend traditional boundaries through innovative technology solutions.
                             </p>
                             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', color: '#94a3b8' }}>
-                                What started as a boutique consulting firm has evolved into a global AI-first powerhouse. We recognized early that artificial intelligence wasn't just the future—it was the present. In 2022, we made a bold pivot to become AI-native, investing heavily in LLM technologies, multi-agent systems, and intelligent automation.
+                                As a young and agile startup, we recognized early that artificial intelligence wasn't just the future—it was the present. We've invested heavily in LLM technologies, multi-agent systems, and intelligent automation from day one.
                             </p>
                             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#94a3b8' }}>
-                                Today, we're proud to serve enterprise clients across 15+ industries, delivering solutions that don't just solve problems—they create competitive advantages and unlock new possibilities.
+                                Today, we're building our reputation by delivering innovative solutions that don't just solve problems—they create competitive advantages and unlock new possibilities for growing businesses.
                             </p>
                         </div>
                         <div className="glass" style={{ padding: '3rem', borderRadius: '1.5rem' }}>
@@ -125,8 +123,8 @@ export default function AboutPage() {
                                 </div>
                                 <div>
                                     <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>💎</div>
-                                    <h4 style={{ marginBottom: '0.5rem' }}>Proven Track Record</h4>
-                                    <p style={{ color: '#94a3b8', fontSize: '0.95rem' }}>100+ successful projects with 95% client retention rate speak for themselves.</p>
+                                    <h4 style={{ marginBottom: '0.5rem' }}>Agile & Innovative</h4>
+                                    <p style={{ color: '#94a3b8', fontSize: '0.95rem' }}>As a startup, we move fast, adapt quickly, and deliver cutting-edge solutions without legacy constraints.</p>
                                 </div>
                             </div>
                         </div>
@@ -231,20 +229,20 @@ export default function AboutPage() {
                     <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Built by Innovators, For Innovators</h2>
                         <p style={{ fontSize: '1.2rem', lineHeight: '1.8', color: '#94a3b8', marginBottom: '3rem' }}>
-                            Our team is our greatest asset. We bring together world-class engineers, AI researchers, business strategists, and creative thinkers who share a passion for solving complex problems and pushing technological boundaries.
+                            As a startup, we're lean, agile, and hungry. Our small but mighty team brings together talented engineers, AI enthusiasts, and creative problem-solvers who are passionate about building the future of intelligent automation.
                         </p>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginTop: '3rem' }}>
                             <div className="glass" style={{ padding: '2rem', borderRadius: '1rem' }}>
-                                <h3 style={{ fontSize: '2.5rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>50+</h3>
-                                <p style={{ color: '#94a3b8' }}>Expert Team Members</p>
+                                <h3 style={{ fontSize: '2.5rem', color: 'var(--primary)', marginBottom: '0.5rem' }}>Lean</h3>
+                                <p style={{ color: '#94a3b8' }}>Agile Team</p>
                             </div>
                             <div className="glass" style={{ padding: '2rem', borderRadius: '1rem' }}>
-                                <h3 style={{ fontSize: '2.5rem', color: 'var(--secondary)', marginBottom: '0.5rem' }}>10+</h3>
-                                <p style={{ color: '#94a3b8' }}>Years Avg Experience</p>
+                                <h3 style={{ fontSize: '2.5rem', color: 'var(--secondary)', marginBottom: '0.5rem' }}>Fast</h3>
+                                <p style={{ color: '#94a3b8' }}>Quick Iterations</p>
                             </div>
                             <div className="glass" style={{ padding: '2rem', borderRadius: '1rem' }}>
                                 <h3 style={{ fontSize: '2.5rem', color: 'var(--accent)', marginBottom: '0.5rem' }}>3</h3>
-                                <p style={{ color: '#94a3b8' }}>Global Offices</p>
+                                <p style={{ color: '#94a3b8' }}>Global Locations</p>
                             </div>
                         </div>
                     </div>
@@ -257,7 +255,7 @@ export default function AboutPage() {
                     <div className="glass" style={{ padding: '4rem', borderRadius: '1.5rem', textAlign: 'center', border: '2px solid var(--primary)' }}>
                         <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Ready to Transform Your Business?</h2>
                         <p style={{ fontSize: '1.2rem', color: '#94a3b8', marginBottom: '2rem', maxWidth: '700px', margin: '0 auto 2rem' }}>
-                            Join the 50+ enterprise clients who trust us to deliver AI-first solutions that drive real results.
+                            Join the growing businesses who trust us to deliver innovative AI-first solutions that drive real results.
                         </p>
                         <Link href="/contact" className="btn-primary" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
                             Let's Build Something Amazing
