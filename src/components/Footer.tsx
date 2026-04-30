@@ -36,7 +36,7 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h4 className={styles.heading}>Locations</h4>
                         <p className={styles.location}>USA | India | UK</p>
-                        <p className={styles.email}>info@bqubetech.com</p>
+                        <p className={styles.email}>info@bqubetechnogies.com</p>
                     </div>
                 </div>
                 <div className={styles.bottom}>
